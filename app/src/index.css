@@ -1,10 +1,18 @@
-body {
+:root{
+  --bg-color: #222;
+  --sec-color: rgb(32, 207, 230);
+}
+
+html,body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg-color);
+  width: 100%;
+  height: 100%;
 }
 
 code {
