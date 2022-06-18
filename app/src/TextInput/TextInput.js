@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState} from "react";
 import './TextInput.css';
 
 function TextInput(text){
@@ -6,10 +6,10 @@ function TextInput(text){
 
     const testValidate = (e) => {
         setvalor(e.target.value)
-        if(e.target.value != ""){
+        if(e.target.value !== ""){
             e.target.setAttribute("className","valido")
         }
-        else if(e.target.value == ""){
+        else if(e.target.value === ""){
             e.target.removeAttribute("className")
         }
     }

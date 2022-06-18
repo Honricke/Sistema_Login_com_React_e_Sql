@@ -1,20 +1,19 @@
-import React, { useState } from 'react'
+import React, { useContext } from 'react'
 import './App.css'
-import TextInput from './TextInput'
+import LoginPage from "./LoginPage/LoginPage"
+import {AuthContext} from "./context/auth"
 
 function App() {
-	function getValues(e){
+    const {authenticated,loger} = useContext(AuthContext)
+
+	const getValues = (e) => {
 		e.preventDefault()
-		console.log(e.target[0].value)
+		loger(e.target[0].value,e.target[1].value)
 	}
-	return (
+
+	return ( 
 		<>
-			<form onSubmit={getValues} action="#">
-				<TextInput message={["Login","text"]}/>
-				<TextInput message={["Senha","password"]}/>
-				<button className='botao' type='submit'>Enviar</button>
-			</form>
-			<a href='./cadastro.html'></a>
+			<LoginPage/>
 		</>
 	)
 }
